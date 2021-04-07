@@ -2,21 +2,21 @@
 - name: httpd
   hosts: all
   tasks:
-  - name: Install apache packages 
+  - name: Install apache packages
     yum:
       name: httpd
       state: present
   - name: ensure httpd is running
     service:
-      name: httpd 
-      state: latest
+      name: httpd
+      state: enabled
   - name: Open port 80 for http access
     firewalld:
       service: http
       permanent: true
       state: enabled
   - name: Restart the firewalld service to load in the firewall changes
-    service: 
-      name: firewalld 
+    service:
+      name: firewalld
       state: restarted
 ...
