@@ -1,6 +1,5 @@
 ---
 - name: update all packages
-  hosts: all
     yum:
       name: '*'
       state: latest
