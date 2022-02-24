@@ -2,7 +2,7 @@
 - name: rhel update
   hosts: all
   tasks:
-  - name: Install updates
-    yum:
-      name: '*'
-      state: present
+    - name: Install updates
+      yum:
+        name: '*'
+        state: present
