@@ -5,4 +5,4 @@
     - name: Install updates
       yum:
         name: '*'
-        state: present
+        state: latest
